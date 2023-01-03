@@ -40,6 +40,24 @@
     <script src="flutter.js" defer></script>
 </head>
 <body>
+<body flt-renderer="canvaskit (auto-selected)" flt-build-mode="debug" spellcheck="false" style="position: fixed; inset: 0px; overflow: hidden; padding: 0px; margin: 0px; user-select: none; touch-action: none; font: 14px sans-serif; color: red;">
+<script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      });
+    });
+  </script>
+
+
+<script src="main.dart.js" type="application/javascript"></script><flt-glass-pane style="position: absolute; inset: 0px; cursor: default;"></flt-glass-pane></body>
 <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
